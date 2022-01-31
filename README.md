@@ -22,7 +22,7 @@ TODO ...
   docker exec -it ${ContainerID} /bin/bash
   ```
   
-* Exit from a container
+* Exit from a container  
   `exit`
 
 * List images  

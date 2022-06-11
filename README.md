@@ -13,6 +13,9 @@ TODO ...
 * [RabbitMQ3 Google containers](https://console.cloud.google.com/marketplace/product/google/rabbitmq3?project=czechrepublic-290206) => [Docker Image Repository](https://console.cloud.google.com/gcr/images/cloud-marketplace/GLOBAL/google/rabbitmq3)
 
 ### [Docker commands](https://docs.docker.com/engine/reference/run/)
+* [Search the Docker Hub for images](https://docs.docker.com/engine/reference/commandline/search/)  
+  `docker search ubuntu -f -is-official=true`, search official released image `ubuntu` from the Docker Hub
+  
 * [Attach to a running container](https://docs.docker.com/engine/reference/commandline/attach/)  
   `docker attach ${ContainerID}`  
  

@@ -26,7 +26,7 @@ TODO ...
   * `crtl + p, q` (keep the container alive)
   * `exit` (shutdown the container)
 
-* List images  
+* [List images](https://docs.docker.com/engine/reference/commandline/images/)
   `docker images`
 
 * List containers and IDs  

@@ -47,13 +47,14 @@ TODO ...
 * Remove a container  
   `docker rm ${ContainerID}`
   
-* [Remove all stopped containers](https://docs.docker.com/engine/reference/commandline/container_prune/)
+* [Remove all stopped containers](https://docs.docker.com/engine/reference/commandline/container_prune/)  
   `docker container prune`
 
 * Remove an image    
   `docker rmi ${IMAGE_ID}`
   
-* `docker build -t ${} . `
+* [Build an image from a Dockerfile](https://docs.docker.com/engine/reference/commandline/build/)  
+  `docker build -t webserver:latest . --no-cache`
 
 
 ### Add packages in the container 

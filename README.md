@@ -22,8 +22,9 @@ TODO ...
   docker exec -it ${ContainerID} /bin/bash
   ```
   
-* Exit from a container  
-  `exit`
+* Exit from a container 
+  * `crtl + p, q` (keep the container alive)
+  * `exit` (as well as shutdown the container)
 
 * List images  
   `docker images`

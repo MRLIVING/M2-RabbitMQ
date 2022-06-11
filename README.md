@@ -13,9 +13,9 @@ TODO ...
 * [RabbitMQ3 Google containers](https://console.cloud.google.com/marketplace/product/google/rabbitmq3?project=czechrepublic-290206) => [Docker Image Repository](https://console.cloud.google.com/gcr/images/cloud-marketplace/GLOBAL/google/rabbitmq3)
 
 ### [Docker commands](https://docs.docker.com/engine/reference/run/)
-* List containers and IDs  
-  `docker ps -a`
-
+* Attach to a running container
+  `docker attach ${ContainerID}`  
+ 
 * [Run a command in a running container](https://docs.docker.com/engine/reference/commandline/exec/)  
   ```
   # enter into to a container and run in Bash shell
@@ -29,6 +29,9 @@ TODO ...
 * List images  
   `docker images`
 
+* List containers and IDs  
+  `docker ps -a`
+  
 * List containers  
   `docker container ls`
 

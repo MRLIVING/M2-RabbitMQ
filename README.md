@@ -24,7 +24,7 @@ TODO ...
   
 * Exit from a container 
   * `crtl + p, q` (keep the container alive)
-  * `exit` (as well as shutdown the container)
+  * `exit` (shutdown the container)
 
 * List images  
   `docker images`

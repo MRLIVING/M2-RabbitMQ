@@ -46,9 +46,15 @@ TODO ...
 
 * Remove a container  
   `docker rm ${ContainerID}`
+  
+* [Remove all stopped containers](https://docs.docker.com/engine/reference/commandline/container_prune/)
+  `docker container prune`
 
 * Remove an image    
   `docker rmi ${IMAGE_ID}`
+  
+* `docker build -t ${} . `
+
 
 ### Add packages in the container 
 ```

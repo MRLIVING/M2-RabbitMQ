@@ -55,6 +55,8 @@ TODO ...
   
 * [Build an image from a Dockerfile](https://docs.docker.com/engine/reference/commandline/build/)  
   `docker build -t ${repo name}:${tag} . --no-cache`
+  
+  * [Dockerfile](https://docs.docker.com/engine/reference/builder/)
 
 
 ### Add packages in the container 

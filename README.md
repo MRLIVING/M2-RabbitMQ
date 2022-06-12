@@ -54,7 +54,7 @@ TODO ...
   `docker rmi ${IMAGE_ID}`
   
 * [Build an image from a Dockerfile](https://docs.docker.com/engine/reference/commandline/build/)  
-  `docker build -t webserver:latest . --no-cache`
+  `docker build -t ${repo name}:${tag} . --no-cache`
 
 
 ### Add packages in the container 

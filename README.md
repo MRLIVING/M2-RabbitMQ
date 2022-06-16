@@ -16,7 +16,7 @@ TODO ...
 * [Search the Docker Hub for images](https://docs.docker.com/engine/reference/commandline/search/)  
   `docker search ubuntu -f -is-official=true`, search official released image `ubuntu` from the Docker Hub
  
-* [Run a command in a new container]
+* [Run a command in a new container](https://docs.docker.com/engine/reference/commandline/run/)  
   `docker run -it ubuntu /bin/bash`
 
 * [Attach to a running container](https://docs.docker.com/engine/reference/commandline/attach/)  

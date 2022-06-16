@@ -15,11 +15,14 @@ TODO ...
 ### [Docker commands](https://docs.docker.com/engine/reference/run/)
 * [Search the Docker Hub for images](https://docs.docker.com/engine/reference/commandline/search/)  
   `docker search ubuntu -f -is-official=true`, search official released image `ubuntu` from the Docker Hub
-  
+ 
+* [Run a command in a new container]
+  `docker run -it ubuntu /bin/bash`
+
 * [Attach to a running container](https://docs.docker.com/engine/reference/commandline/attach/)  
   `docker attach ${ContainerID}`  
  
-* [Run a command in a running container](https://docs.docker.com/engine/reference/commandline/exec/)  
+* [Execute a command in a running container](https://docs.docker.com/engine/reference/commandline/exec/)  
   ```
   # enter into to a container and run in Bash shell
   docker exec -it ${ContainerID} /bin/bash

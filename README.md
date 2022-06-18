@@ -40,6 +40,12 @@ TODO ...
   
 * List containers  
   `docker container ls`
+  
+* [List networks](https://docs.docker.com/engine/reference/commandline/network_ls/)
+  `docker network ls`
+  
+* [Display detailed information on one or more networks](https://docs.docker.com/engine/reference/commandline/network_inspect/)
+  `docker network inspect ${NETWORK}`
 
 * Stop a container  
   `docker stop ${ContainerID}`

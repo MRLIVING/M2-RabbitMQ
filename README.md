@@ -54,7 +54,9 @@ TODO ...
   `docker start ${ContainerID}`
 
 * Remove a container  
-  `docker rm ${ContainerID}`
+  `docker rm ${ContainerID}`  
+  * enfore remove a container event it is runnning  
+    `docker rm -f ${ContainerID}`
   
 * [Remove all stopped containers](https://docs.docker.com/engine/reference/commandline/container_prune/)  
   `docker container prune`

@@ -98,11 +98,11 @@ rabbitmqctl status
 ### Create a new image for the container’s changes
 `docker commit ${ContainerID} rabbitmq3:v3.8.23_mgt_ui`
 
-### [Starting the RabbitMQ container](https://github.com/GoogleCloudPlatform/rabbitmq-docker/blob/master/README.md#using-docker)  
+### [Create and start a RabbitMQ container in background](https://github.com/GoogleCloudPlatform/rabbitmq-docker/blob/master/README.md#using-docker)  
 `docker run --network=host -d ${IMAGE_NAME}:${TAG_NAME}`,  
 i.e. `docker run --network=host -d rabbitmq3:v3.8.23_mgt_ui`
 
-#### Remove enforcedly the running container if required.
+* remove enforcedly the running container if required.
 `docker rm -f ${ContainerID}`
 
 ### [Add a RabbitMQ user for M2 and Grant permission](https://www.rabbitmq.com/access-control.html)

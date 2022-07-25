@@ -102,7 +102,7 @@ rabbitmqctl status
 `docker run --network=host -d ${IMAGE_NAME}:${TAG_NAME}`,  
 i.e. `docker run --network=host -d rabbitmq3:v3.8.23_mgt_ui`
 
-* remove enforcedly the running container if required.
+* remove enforcedly the deprecated running container if required.  
 `docker rm -f ${ContainerID}`
 
 ### [Add a RabbitMQ user for M2 and Grant permission](https://www.rabbitmq.com/access-control.html)

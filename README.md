@@ -99,7 +99,8 @@ rabbitmqctl status
 `docker commit ${ContainerID} rabbitmq3:v3.8.23_mgt_ui`
 
 ### [Starting the RabbitMQ container](https://github.com/GoogleCloudPlatform/rabbitmq-docker/blob/master/README.md#using-docker)  
-`docker run --network=host -d ${IMAGE_NAME}:${TAG_NAME}`, i.e. `docker run --network=host -d rabbitmq3:v3.8.23_mgt_ui`
+`docker run --network=host -d ${IMAGE_NAME}:${TAG_NAME}`,  
+i.e. `docker run --network=host -d rabbitmq3:v3.8.23_mgt_ui`
 
 ### [Add a RabbitMQ user for M2 and Grant permission](https://www.rabbitmq.com/access-control.html)
 ```

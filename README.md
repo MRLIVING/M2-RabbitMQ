@@ -12,6 +12,8 @@ TODO ...
 ### Create a GCE with [Container-Optimized](https://cloud.google.com/container-optimized-os/docs/concepts/features-and-benefits) OS image
 * [RabbitMQ3 Google containers](https://console.cloud.google.com/marketplace/product/google/rabbitmq3?project=czechrepublic-290206) => [Docker Image Repository](https://console.cloud.google.com/gcr/images/cloud-marketplace/GLOBAL/google/rabbitmq3)
 
+* [Google docker images](https://console.cloud.google.com/gcr/images/cloud-marketplace/global/google)
+
 ### [Docker commands](https://docs.docker.com/engine/reference/run/)
 * [Search the Docker Hub for images](https://docs.docker.com/engine/reference/commandline/search/)  
   `docker search ubuntu -f -is-official=true`, search official released image `ubuntu` from the Docker Hub

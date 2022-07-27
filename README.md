@@ -13,7 +13,7 @@ TODO ...
 * [RabbitMQ3 Google containers](https://console.cloud.google.com/marketplace/product/google/rabbitmq3?project=czechrepublic-290206) => [Docker Image Repository](https://console.cloud.google.com/gcr/images/cloud-marketplace/GLOBAL/google/rabbitmq3)
 
 * [Google docker images](https://console.cloud.google.com/gcr/images/cloud-marketplace/global/google)
-  * use Filter to get desired image. 
+  * use Filter to get the desired image. 
 
 ### [Docker commands](https://docs.docker.com/engine/reference/run/)
 * [Search the Docker Hub for images](https://docs.docker.com/engine/reference/commandline/search/)  

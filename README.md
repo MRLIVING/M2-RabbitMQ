@@ -10,9 +10,6 @@
 ### Create a GCE with [Container-Optimized](https://cloud.google.com/container-optimized-os/docs/concepts/features-and-benefits) OS image
 * [RabbitMQ3 Google containers](https://console.cloud.google.com/marketplace/product/google/rabbitmq3?project=czechrepublic-290206) => [Docker Image Repository](https://console.cloud.google.com/gcr/images/cloud-marketplace/GLOBAL/google/rabbitmq3)
 
-* [Google docker images](https://console.cloud.google.com/gcr/images/cloud-marketplace/global/google)
-  * use Filter to get the desired image. 
-
 ### [Docker Quick Start](https://github.com/MRLIVING/Becca/wiki/Docker-Quick-Start)
 
 ### Add packages in the container 
@@ -90,3 +87,5 @@ rabbitmqctl set_permissions -p / ${USER_NAME} ".*" ".*" ".*"
 * [RabbitMQ Port Access](https://www.rabbitmq.com/networking.html#ports)
 * [Docker Container 基礎入門篇 1](https://azole.medium.com/docker-container-%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80%E7%AF%87-1-3cb8876f2b14)
 * [RabbitMQ Management HTTP API](https://rawcdn.githack.com/rabbitmq/rabbitmq-server/v3.8.23/deps/rabbitmq_management/priv/www/api/index.html)
+* [Google docker images](https://console.cloud.google.com/gcr/images/cloud-marketplace/global/google) (use Filter to get the desired image.)
+  

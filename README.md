@@ -6,8 +6,6 @@
      * [Add packages in the container](#add-packages-in-the-container)
      * [start/restart the RabbitMQ instance](#starting-the-rabbitmq-container)
 
-TODO ...
-
 ## Installation with Docker
 ### Create a GCE with [Container-Optimized](https://cloud.google.com/container-optimized-os/docs/concepts/features-and-benefits) OS image
 * [RabbitMQ3 Google containers](https://console.cloud.google.com/marketplace/product/google/rabbitmq3?project=czechrepublic-290206) => [Docker Image Repository](https://console.cloud.google.com/gcr/images/cloud-marketplace/GLOBAL/google/rabbitmq3)
@@ -15,63 +13,7 @@ TODO ...
 * [Google docker images](https://console.cloud.google.com/gcr/images/cloud-marketplace/global/google)
   * use Filter to get the desired image. 
 
-### [Docker commands](https://docs.docker.com/engine/reference/run/)
-* [Search the Docker Hub for images](https://docs.docker.com/engine/reference/commandline/search/)  
-  `docker search ubuntu -f -is-official=true`, search official released image `ubuntu` from the Docker Hub
- 
-* [Run a command in a new container](https://docs.docker.com/engine/reference/commandline/run/)  
-  `docker run -it ubuntu /bin/bash`
-
-* [Attach to a running container](https://docs.docker.com/engine/reference/commandline/attach/)  
-  `docker attach ${ContainerID}`  
- 
-* [Execute a command in a running container](https://docs.docker.com/engine/reference/commandline/exec/)  
-  ```
-  # enter into to a container and run in Bash shell
-  docker exec -it ${ContainerID} /bin/bash
-  ```
-  
-* Exit from a container 
-  * `crtl + p, q` (keep the container alive)
-  * `exit` (shutdown the container)
-
-* [List images](https://docs.docker.com/engine/reference/commandline/images/)
-  `docker images`
-
-* List containers and IDs  
-  `docker ps -a`
-  
-* List containers  
-  `docker container ls`
-  
-* [List networks](https://docs.docker.com/engine/reference/commandline/network_ls/)  
-  `docker network ls`
-  
-* [Display detailed information on one or more networks](https://docs.docker.com/engine/reference/commandline/network_inspect/)  
-  `docker network inspect ${NETWORK}`
-
-* Stop a container  
-  `docker stop ${ContainerID}`
-
-* Start a container  
-  `docker start ${ContainerID}`
-
-* Remove a container  
-  `docker rm ${ContainerID}`  
-  * enfore remove a container event it is runnning  
-    `docker rm -f ${ContainerID}`
-  
-* [Remove all stopped containers](https://docs.docker.com/engine/reference/commandline/container_prune/)  
-  `docker container prune`
-
-* Remove an image    
-  `docker rmi ${IMAGE_ID}`
-  
-* [Build an image from a Dockerfile](https://docs.docker.com/engine/reference/commandline/build/)  
-  `docker build -t ${repo name}:${tag} . --no-cache`
-  
-  * [Dockerfile](https://docs.docker.com/engine/reference/builder/)
-
+### [Docker Quick Start](https://github.com/MRLIVING/Becca/wiki/Docker-Quick-Start)
 
 ### Add packages in the container 
 ```

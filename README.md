@@ -7,10 +7,20 @@
      * [start/restart the RabbitMQ instance](#starting-the-rabbitmq-container)
 
 ## Installation with Docker
+### [Docker Quick Start](https://github.com/MRLIVING/Becca/wiki/Docker-Quick-Start)
+
 ### Create a GCE with [Container-Optimized](https://cloud.google.com/container-optimized-os/docs/concepts/features-and-benefits) OS image
 * [RabbitMQ3 Google containers](https://console.cloud.google.com/marketplace/product/google/rabbitmq3?project=czechrepublic-290206) => [Docker Image Repository](https://console.cloud.google.com/gcr/images/cloud-marketplace/GLOBAL/google/rabbitmq3)
 
-### [Docker Quick Start](https://github.com/MRLIVING/Becca/wiki/Docker-Quick-Start)
+### [Create and start a RabbitMQ container in background](https://github.com/GoogleCloudPlatform/rabbitmq-docker/blob/master/README.md#using-docker)  
+`docker run --network=host -d ${IMAGE_NAME}:${TAG_NAME}`,  
+i.e. `docker run --network=host -d rabbitmq3:v3.8.23_mgt_ui`
+
+* remove enforcedly the deprecated running container if required.  
+`docker rm -f ${ContainerID}`
+
+* Create a new image for the container’s changes
+`docker commit ${ContainerID} rabbitmq3:v3.8.23_mgt_ui`
 
 ### Add packages in the container 
 ```
@@ -36,16 +46,6 @@ rabbitmqctl stop_app
 rabbitmqctl start_app
 rabbitmqctl status
 ```
-
-### Create a new image for the container’s changes
-`docker commit ${ContainerID} rabbitmq3:v3.8.23_mgt_ui`
-
-### [Create and start a RabbitMQ container in background](https://github.com/GoogleCloudPlatform/rabbitmq-docker/blob/master/README.md#using-docker)  
-`docker run --network=host -d ${IMAGE_NAME}:${TAG_NAME}`,  
-i.e. `docker run --network=host -d rabbitmq3:v3.8.23_mgt_ui`
-
-* remove enforcedly the deprecated running container if required.  
-`docker rm -f ${ContainerID}`
 
 ### [Add a RabbitMQ user for M2 and Grant permission](https://www.rabbitmq.com/access-control.html)
 ```

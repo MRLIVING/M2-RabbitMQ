@@ -25,7 +25,7 @@ i.e. `docker run --network=host -d rabbitmq3:v3.8.23_mgt_ui`
 ### Add packages in the container 
 ```
 apt-get update && apt-get install -y procps
-apt-get update && apt-get install curl
+apt-get update && apt-get install -y curl
 apt-get update && apt-get install -y vim
 ```
 

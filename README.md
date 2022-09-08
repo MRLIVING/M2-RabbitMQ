@@ -58,7 +58,7 @@ rabbitmqctl set_permissions -p / ${USER_NAME} ".*" ".*" ".*"
 ```
 
 ### Test the connection via HTTP API
-* [Get a list of vhosts](https://rawcdn.githack.com/rabbitmq/rabbitmq-server/v3.8.23/deps/rabbitmq_management/priv/www/api/index.html)  
+* [Get a list of vhosts](https://rawcdn.githack.com/rabbitmq/rabbitmq-server/v3.8.23/deps/rabbitmq_management/priv/www/api/index.html)   
   `curl -i -u guest:guest http://localhost:15672/api/vhosts`
 
 * Management Web UI  
@@ -69,9 +69,6 @@ rabbitmqctl set_permissions -p / ${USER_NAME} ".*" ".*" ".*"
 ./bin/magento setup:upgrade
 ./bin/magento setup:di:compile
 ```
-
-
-
 
 
 ## [RabbitMQ popular commands](https://www.rabbitmq.com/rabbitmqctl.8.html) 

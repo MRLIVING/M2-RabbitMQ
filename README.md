@@ -12,6 +12,9 @@
 ### Create a GCE with [Container-Optimized](https://cloud.google.com/container-optimized-os/docs/concepts/features-and-benefits) OS image
 * [RabbitMQ3 Google containers](https://console.cloud.google.com/marketplace/product/google/rabbitmq3?project=czechrepublic-290206) => [Docker Image Repository](https://console.cloud.google.com/gcr/images/cloud-marketplace/GLOBAL/google/rabbitmq3)
 
+### Pull the [RabbitMQ v3.8 docker image](https://console.cloud.google.com/gcr/images/cloud-marketplace/global/google%2Frabbitmq3@sha256:20c452f900a50d27a6fab69bbe2bd33571f94dae4e23682157297102fb8325c7/details?tab=vulnz)
+`docker pull gcr.io/cloud-marketplace/google/rabbitmq3:3.8`
+
 ### [Create and start a RabbitMQ container in background](https://github.com/GoogleCloudPlatform/rabbitmq-docker/blob/master/README.md#using-docker)  
 `docker run --network=host -d ${IMAGE_NAME}:${TAG_NAME}`,  
 i.e. `docker run --network=host -d rabbitmq3:v3.8.23_mgt_ui`

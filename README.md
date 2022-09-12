@@ -1,7 +1,6 @@
 ## TOC
 * [Installation with Docker](#installation-with-docker)    
-  * [Add packages in the container](#add-packages-in-the-container)
-  * [start/restart the RabbitMQ instance](#starting-the-rabbitmq-container)
+  * [Add packages in the container](#add-packages-in-the-container)  
   * [Create and start a RabbitMQ container in background](#create-and-start-a-rabbitmq-container-in-background)
   
 
@@ -27,14 +26,17 @@ i.e. `docker run --network=host -d rabbitmq3:v3.8.23_mgt_ui`
 * Create a new image for the container’s changes
 `docker commit ${ContainerID} rabbitmq3:v3.8.23_mgt_ui`
 
-### Add packages in the container 
+### Enter into the container
+`docker exec -it ${ContainerID} /bin/bash`
+
+#### Add packages in the container 
 ```
 apt-get update && apt-get install -y procps
 apt-get update && apt-get install -y curl
 apt-get update && apt-get install -y vim
 ```
 
-### [Management Plugin](https://www.rabbitmq.com/management.html) - RabbitMQ Management Web UI
+#### [Management Plugin](https://www.rabbitmq.com/management.html) - RabbitMQ Management Web UI
 * [Enable management plugin](https://www.rabbitmq.com/management.html#getting-started)
 ```
 rabbitmq-plugins enable rabbitmq_management
@@ -52,7 +54,7 @@ rabbitmqctl start_app
 rabbitmqctl status
 ```
 
-### [Add a RabbitMQ user for M2 and Grant permission](https://www.rabbitmq.com/access-control.html)
+#### [Add a RabbitMQ user for M2 and Grant permission](https://www.rabbitmq.com/access-control.html)
 ```
 # enter into a container shell
 docker exec -it ${ContainerID} /bin/bash
@@ -62,6 +64,11 @@ rabbitmqctl set_user_tags ${USER_NAME} administrator
 rabbitmqctl set_permissions -p / ${USER_NAME} ".*" ".*" ".*"
 ```
 
+#### [RabbitMQ popular commands](https://www.rabbitmq.com/rabbitmqctl.8.html) 
+* delete a user  
+  `rabbitmqctl delete_user ${USER_NAME}`
+  
+  
 ### Test the connection via HTTP API
 * [Get a list of vhosts](https://rawcdn.githack.com/rabbitmq/rabbitmq-server/v3.8.23/deps/rabbitmq_management/priv/www/api/index.html)   
   `curl -i -u guest:guest http://localhost:15672/api/vhosts`
@@ -69,10 +76,6 @@ rabbitmqctl set_permissions -p / ${USER_NAME} ".*" ".*" ".*"
 * Management Web UI  
   `http://rabbitmq.mrl.com.tw:15672/`
 
-
-## [RabbitMQ popular commands](https://www.rabbitmq.com/rabbitmqctl.8.html) 
-* delete a user  
-  `rabbitmqctl delete_user ${USER_NAME}`
 
 ### [Connect RabbitMQ to Magento2](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/install-rabbitmq.html#connect-rabbitmq-to-magento-open-source-or-adobe-commerce)
 

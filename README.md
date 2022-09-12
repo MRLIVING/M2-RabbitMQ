@@ -85,6 +85,21 @@ rabbitmqctl set_permissions -p / ${USER_NAME} ".*" ".*" ".*"
 
 ### [Connect RabbitMQ to Magento2](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/install-rabbitmq.html#connect-rabbitmq-to-magento-open-source-or-adobe-commerce)
 
+* find the `queue` section from the `${M2_ROOT}/app/etc/env.php`
+
+```
+'queue' =>
+  array (
+    'amqp' =>
+    array (
+      'host' => '[rabbitmq.example.com](http://rabbitmq.mrl.com.tw/)',
+      'port' => '11213',
+      'user' => 'magento',
+      'password' => 'magento',
+      'virtualhost' => '/'
+     ),
+  ),
+```
 
 ### [Add the Exchange and Queue into RabbitMQ via enable the Firebear M2 extension](https://docs.google.com/document/d/1fEzuuAJwe0w8r2uv4I3Zq72z5VGLffdAcAHZJ71yRr4/edit#heading=h.zapdgg7thjdw)
 ```

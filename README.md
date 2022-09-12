@@ -67,7 +67,8 @@ rabbitmqctl set_permissions -p / ${USER_NAME} ".*" ".*" ".*"
 * Management Web UI  
   `http://rabbitmq.mrl.com.tw:15672/`
 
-### Register M2 extensions into the Exchange and Queue of the RabbitMQ 
+### Add the Exchange and Queue into RabbitMQ for the Firebear connector M2 extesion
+* check [HERE](https://docs.google.com/document/d/1fEzuuAJwe0w8r2uv4I3Zq72z5VGLffdAcAHZJ71yRr4/edit#heading=h.zapdgg7thjdw)
 ```
 ./bin/magento setup:upgrade
 ./bin/magento setup:di:compile

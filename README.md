@@ -1,6 +1,7 @@
 ## TOC
-* [Installation with Docker](#installation-with-docker)      
-  * [Create and start a RabbitMQ container in background](#create-and-start-a-rabbitmq-container-in-background)
+* [Installation with Docker](#installation-with-docker)
+  * [Pull the RabbitMQ v3.8 docker image](#pull-the-rabbitmq-v38-docker-image)
+  * [Create and start a RabbitMQ container in background](#create-and-start-a-rabbitmq-container-in-background)  
   * [Enter into the container](#enter-into-the-container)
     * [Add packages in the container](#add-packages-in-the-container)
     * [Management Plugin - RabbitMQ Management Web UI](#management-plugin---rabbitmq-management-web-ui)

@@ -8,7 +8,7 @@
     * [Add a RabbitMQ user for M2 and Grant permission](#add-a-rabbitmq-user-for-m2-and-grant-permission)
   * [Test the connection via HTTP API](#test-the-connection-via-http-api)
   * [Connect RabbitMQ to Magento2](#connect-rabbitmq-to-magento2)
-  * [Add the Exchange and Queue into RabbitMQ via enable the Firebear M2 extension](##add-the-exchange-and-queue-into-rabbitmq-via-enable-the-firebear-m2-extension)
+  * [Add the Exchange and Queue into RabbitMQ via enable the Firebear M2 extension](#add-the-exchange-and-queue-into-rabbitmq-via-enable-the-firebear-m2-extension)
   
 
 ## Installation with Docker

@@ -88,6 +88,7 @@ rabbitmqctl set_permissions -p / ${USER_NAME} ".*" ".*" ".*"
 * find the `queue` section from the `${M2_ROOT}/app/etc/env.php`
 
 ```
+...
 'queue' =>
   array (
     'amqp' =>
@@ -99,6 +100,7 @@ rabbitmqctl set_permissions -p / ${USER_NAME} ".*" ".*" ".*"
       'virtualhost' => '/'
      ),
   ),
+...
 ```
 
 ### [Add the Exchange and Queue into RabbitMQ via enable the Firebear M2 extension](https://docs.google.com/document/d/1fEzuuAJwe0w8r2uv4I3Zq72z5VGLffdAcAHZJ71yRr4/edit#heading=h.zapdgg7thjdw)

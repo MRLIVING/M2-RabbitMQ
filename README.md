@@ -1,13 +1,15 @@
 ## TOC
-* Installation with Docker
-  * Installation
-     * [Create a GCE](#create-a-gce-with-container-optimized-os-image)
-     * [Enter the container](#docker-commands)
-     * [Add packages in the container](#add-packages-in-the-container)
-     * [start/restart the RabbitMQ instance](#starting-the-rabbitmq-container)
+* [Installation with Docker](#installation-with-docker)    
+  * [Add packages in the container](#add-packages-in-the-container)
+  * [start/restart the RabbitMQ instance](#starting-the-rabbitmq-container)
+  * [Create and start a RabbitMQ container in background](#create-and-start-a-rabbitmq-container-in-background)
+  
 
 ## Installation with Docker
 ### [Docker Quick Start](https://github.com/MRLIVING/Becca/wiki/Docker-Quick-Start)
+
+### [Pull the RabbitMQ v3.8 docker image](#pull-the-rabbitmq-v38-docker-image)
+
 
 ### Create a GCE with [Container-Optimized](https://cloud.google.com/container-optimized-os/docs/concepts/features-and-benefits) OS image
 * [RabbitMQ3 Google containers](https://console.cloud.google.com/marketplace/product/google/rabbitmq3?project=czechrepublic-290206) => [Docker Image Repository](https://console.cloud.google.com/gcr/images/cloud-marketplace/GLOBAL/google/rabbitmq3)
@@ -67,15 +69,6 @@ rabbitmqctl set_permissions -p / ${USER_NAME} ".*" ".*" ".*"
 * Management Web UI  
   `http://rabbitmq.mrl.com.tw:15672/`
 
-### [Add the Exchange and Queue into RabbitMQ via enable the Firebear M2 extesion](https://docs.google.com/document/d/1fEzuuAJwe0w8r2uv4I3Zq72z5VGLffdAcAHZJ71yRr4/edit#heading=h.zapdgg7thjdw)
-```
-bin/magento module:disable Firebear_SapDbQueue
-bin/magento setup:upgrade
-bin/magento setup:di:compile
-...
-
-```
-
 
 ## [RabbitMQ popular commands](https://www.rabbitmq.com/rabbitmqctl.8.html) 
 * delete a user  
@@ -83,6 +76,15 @@ bin/magento setup:di:compile
 
 ### [Connect RabbitMQ to Magento2](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/install-rabbitmq.html#connect-rabbitmq-to-magento-open-source-or-adobe-commerce)
 
+
+## [Add the Exchange and Queue into RabbitMQ via enable the Firebear M2 extesion](https://docs.google.com/document/d/1fEzuuAJwe0w8r2uv4I3Zq72z5VGLffdAcAHZJ71yRr4/edit#heading=h.zapdgg7thjdw)
+```
+bin/magento module:disable Firebear_SapDbQueue
+bin/magento setup:upgrade
+bin/magento setup:di:compile
+bin/magento setup:static-content:deploy -f
+chown -R :www-data .
+```
 
 ## Reference
 * [Getting started with M2 message queue](https://www.atwix.com/magento-2/getting-started-with-message-queues-in-magento/)

@@ -92,10 +92,10 @@ rabbitmqctl set_permissions -p / ${USER_NAME} ".*" ".*" ".*"
   array (
     'amqp' =>
     array (
-      'host' => '[rabbitmq.example.com](http://rabbitmq.mrl.com.tw/)',
-      'port' => '11213',
-      'user' => 'magento',
-      'password' => 'magento',
+      'host' => 'rabbitmq.mrl.com.tw',
+      'port' => '15672',
+      'user' => '${USER_NAME}',
+      'password' => '${PASSWD}',
       'virtualhost' => '/'
      ),
   ),

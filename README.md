@@ -1,8 +1,8 @@
 ## TOC
-* [Installation with Docker](#installation-with-docker)    
-  * [Add packages in the container](#add-packages-in-the-container)  
+* [Installation with Docker](#installation-with-docker)      
   * [Create and start a RabbitMQ container in background](#create-and-start-a-rabbitmq-container-in-background)
   * [Enter into the container](#enter-into-the-container)
+    * [Add packages in the container](#add-packages-in-the-container)
     * [Management Plugin - RabbitMQ Management Web UI](#management-plugin---rabbitmq-management-web-ui)
     * [Add a RabbitMQ user for M2 and Grant permission](#add-a-rabbitmq-user-for-m2-and-grant-permission)
   * [Test the connection via HTTP API](#test-the-connection-via-http-api)

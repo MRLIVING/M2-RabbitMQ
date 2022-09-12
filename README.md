@@ -114,6 +114,9 @@ chown -R :www-data .
 
 
 ## Reference
+* [AMQP 0-9-1 Model Explained](https://www.rabbitmq.com/tutorials/amqp-concepts.html#programmable-protocol)
+  * [RabbitMQ Tutorial](https://www.rabbitmq.com/getstarted.html)
+    * [Hello World!, simple queue usage](https://www.rabbitmq.com/tutorials/tutorial-one-go.html)
 * [Getting started with M2 message queue](https://www.atwix.com/magento-2/getting-started-with-message-queues-in-magento/)
 * [Asynchronous Message Queue configuration files](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/message-queues/async-message-queue-config-files.html)
 * [RabbitMQ Port Access](https://www.rabbitmq.com/networking.html#ports)

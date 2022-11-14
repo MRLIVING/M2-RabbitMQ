@@ -94,13 +94,20 @@ rabbitmqctl set_permissions -p / ${USER_NAME} ".*" ".*" ".*"
     'amqp' =>
     array (
       'host' => 'rabbitmq.mrl.com.tw',
-      'port' => '15672',
+      'port' => '5672',
       'user' => '${USER_NAME}',
       'password' => '${PASSWD}',
       'virtualhost' => '/'
      ),
   ),
 ...
+```
+
+### Listening Ports List
+```
+amqp | 5672
+clustering | 25672
+http | 15672
 ```
 
 ### [Add the Exchange and Queue into RabbitMQ via enable the Firebear M2 extension](https://docs.google.com/document/d/1fEzuuAJwe0w8r2uv4I3Zq72z5VGLffdAcAHZJ71yRr4/edit#heading=h.zapdgg7thjdw)

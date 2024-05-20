@@ -140,6 +140,7 @@ docker images -a
 
 ### Troubleshooting
 Q: when the container was crash.
+
 Ans:
 由於 rabbitmq 與 M2 的 exchange & queue 會有關聯，故重啟時，須確保與 M2 設定已關聯，否則會需要 upgrade M2 才能成功將 M2 & rabbitmq 連線。
 目前已有兩種方式可在 M2 upgrade 的情況下，將 rabbitmq 重新掛起。

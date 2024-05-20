@@ -132,17 +132,57 @@ rabbitmqctl export_definitions /etc/rabbitmq/definitions.json
 docker commit ${Container_Name} ${IMAGE_NAME}
 ```
 i.e `docker commit rabbitmq rabbitmq_prod`
-# check image
+- check image
 ```
 docker images -a
 ```
+<img width="1114" alt="image" src="https://github.com/MRLIVING/M2-RabbitMQ/assets/99633846/f600e341-7cf1-49be-b0dc-9ca9ee655f3e">
 
+### Troubleshooting
+Q: when the container was crash.
+Ans:
+由於 rabbitmq 與 M2 的 exchange & queue 會有關聯，故重啟時，須確保與 M2 設定已關聯，否則會需要 upgrade M2 才能成功將 M2 & rabbitmq 連線。
+目前已有兩種方式可在 M2 upgrade 的情況下，將 rabbitmq 重新掛起。
+
+1. 從已經建立好的 `rabbitmq_prod` 重新起 container (此部分是將 2024/05/20 正常運作的 container 做成 image, 其中已包含 rabbitmq 設定檔案） 
 - 重新起新的 container
 ```
 docker run -d -p 15672:15672 -p 25672:25672 -p 5672:5672 -e --name ${Container_Name}  --restart=always ${IMAGE_NAME}
 ```
 i.e. `docker run -d -p 15672:15672 -p 25672:25672 -p 5672:5672 -e --name rabbitmq  --restart=always rabbit_prod`
+***
 
+2. 重新由 rabbitmq3/v3.8.23_mgt_ur 起 container
+- 2-1. 重新起新的 container
+```
+docker run -d -p 15672:15672 -p 25672:25672 -p 5672:5672 -e RABBITMQ_DEFAULT_USER=${USER} -e RABBITMQ_DEFAULT_PASS=${USER_PASS} --name ${Container_Name}  --restart=always ${IMAGE_NAME}
+```
+i.e. `docker run -d -p 15672:15672 -p 25672:25672 -p 5672:5672 -e RABBITMQ_DEFAULT_USER=mage -e RABBITMQ_DEFAULT_PASS=mage --name rabbitmq  --restart=always rabbitmq3:v3.8.23_mgt_ui`
+
+- 2-2. import rabbitmq exchange & queue
+```
+curl -u mage:mage -H "Content-Type: application/json" -X POST -T ${RABBITMQ_JSON} http://127.0.0.1:15672/api/definitions
+```
+i.e. `curl -u mage:mage -H "Content-Type: application/json" -X POST -T /home/dio/rabbitmq.json http://127.0.0.1:15672/api/definitions`
+
+- 2-3. Enter into the container
+```
+docker exec -it ${ContainerID} /bin/bash
+```
+- 2-4. Enable management plugin
+```
+rabbitmq-plugins enable rabbitmq_management
+```
+- 2-5. Enable statistics and metrics collection
+```
+echo "management_agent.disable_metrics_collector = false" > /etc/rabbitmq/conf.d/management_agent.disable_metrics_collector.conf
+```
+- 2-6. Restart RabbitMQ and Check the status
+```
+rabbitmqctl stop_app
+rabbitmqctl start_app
+rabbitmqctl status
+```
 
 
 ## Reference
